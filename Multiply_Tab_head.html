@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Multiplication Table in a table
+    </title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    Enter any number : <input type="number" id="num1" />
+    <button onclick="multiply1()">Multiplication Table</button><br><br>
+    <div id="result"></div>
+
+    <script>
+        function multiply1() {
+            var number;
+            // var result = "";
+            var result = "<table border = 1 px width = 10% align-text = center style:background-color = pink><thead><tr><th>Number </th><th> Value</th></tr></thead>";
+
+            // table1 = "<th>Number</th>";
+
+            // number = Number(document.getElementById("number").value);
+            //  number = prompt("Enter any value:");
+            //  document.getElementById("num1").value = number;
+
+            number = document.getElementById("num1").value;
+
+            // document.getElementById( ).innerHTML = 
+            for (var i = 1; i <= 10; i++) {
+                result = result + "<table border = 1 px width = 10% align-text = center><tr><td width = 60% >" + number + "  *  " + i + "  =   " + "</td>" + "<td>" + number * i + "</td></tr></table>";
+                //   result = result + "<table border = 1 px width = 10% align-text = center><tr><td width = 60% >" + number + "  *  "+ i + "  =   "+"</td>"+"<td>" + number * i+"</td></tr></table>" ;
+                //   result = result + "<table border = 1 px width = 10%><tr><td padding-left=20px>" + number + "  *  "+ i + "  =   "+"</td>"+"<td>" + number * i+"</td></tr></table>" ;
+                //   result = result + "<table border = 1 px width = 10%><tr></<td padding-left=20px>" + number + "  *  "+ i + "  =   "+"</td>"+"<td>" + number * i+"</td></tr></table>" ;
+            }
+            //  table1 = "<th>Number</th>";
+            //  document.getElementById("result").innerHTML = table1;
+            document.getElementById("result").innerHTML = result;
+            // console.log(result);
+            // alert(result);
+        }
+    </script>
+
+
+</body>
+
+</html>
